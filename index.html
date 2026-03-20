@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Fifi 🎂</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #7ed957, #4caf50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+/* Card */
+.container {
+  background: rgba(255,255,255,0.15);
+  padding: 40px;
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  max-width: 650px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+/* Image */
+img {
+  width: 240px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  border: 4px solid white;
+}
+
+/* Title */
+h1 {
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+/* Message */
+#typing {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* Cake */
+.cake {
+  font-size: 60px;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+/* Player */
+.player {
+  margin-top: 15px;
+  background: rgba(255,255,255,0.2);
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+button {
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Floating flowers (clean, not spammy) */
+.flower {
+  position: absolute;
+  font-size: 18px;
+  opacity: 0.6;
+  animation: float 8s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}
+/* 🌿 Real vine styling - LIVELY */
+.vine-left, .vine-right {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  opacity: 0.85;
+  filter: drop-shadow(0 0 8px rgba(76, 175, 80, 0.4));
+}
+
+.vine-left { left: 0; }
+.vine-right { right: 0; }
+
+/* Vine stem animation */
+.vine-left svg, .vine-right svg {
+  animation: vineGrow 4s ease-in-out infinite;
+}
+
+/* 🌬️ Leaf sway animation */
+@keyframes sway {
+  0% { transform: rotate(-35deg); }
+  25% { transform: rotate(-15deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(-20deg); }
+  100% { transform: rotate(-35deg); }
+}
+
+@keyframes sway2 {
+  0% { transform: rotate(25deg); }
+  25% { transform: rotate(40deg); }
+  50% { transform: rotate(50deg); }
+  75% { transform: rotate(35deg); }
+  100% { transform: rotate(25deg); }
+}
+
+@keyframes leafPulse {
+  0%, 100% { opacity: 0.8; filter: brightness(1); }
+  50% { opacity: 1; filter: brightness(1.3); }
+}
+
+@keyframes vineGrow {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.02); }
+}
+
+/* Apply animation */
+.leaf1 {
+  transform-origin: center;
+  animation: sway 4s ease-in-out infinite, leafPulse 3s ease-in-out infinite;
+}
+
+.leaf2 {
+  transform-origin: center;
+  animation: sway2 4s ease-in-out infinite, leafPulse 3s ease-in-out infinite 0.5s;
+}
+
+/* Enhance vine stroke */
+svg path {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+</style>
+</head>
+
+<body>
+<!-- 🌿 Left Vine -->
+<svg class="vine-left" viewBox="0 0 100 600">
+  <path d="M50 0 Q30 100 50 200 T50 400 T50 600"
+        stroke="#1b5e20" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Large prominent leaves -->
+  <ellipse class="leaf1" cx="50" cy="80" rx="10" ry="16" fill="#66bb6a"/>
+  <ellipse class="leaf2" cx="30" cy="150" rx="11" ry="17" fill="#81c784"/>
+  <ellipse class="leaf1" cx="70" cy="220" rx="10" ry="16" fill="#4caf50"/>
+  <ellipse class="leaf2" cx="25" cy="280" rx="12" ry="18" fill="#9ccc65"/>
+  <ellipse class="leaf1" cx="75" cy="350" rx="11" ry="17" fill="#7cb342"/>
+  <ellipse class="leaf2" cx="35" cy="420" rx="10" ry="16" fill="#66bb6a"/>
+  <ellipse class="leaf1" cx="65" cy="520" rx="12" ry="18" fill="#558b2f"/>
+  <!-- Small accent leaves -->
+  <circle class="leaf2" cx="55" cy="130" r="6" fill="#8bc34a"/>
+  <circle class="leaf1" cx="45" cy="300" r="5" fill="#9ccc65"/>
+  <circle class="leaf2" cx="60" cy="470" r="6" fill="#7cb342"/>
+</svg>
+
+<!-- 🌿 Right Vine -->
+<svg class="vine-right" viewBox="0 0 100 600">
+  <path d="M50 0 Q70 100 50 200 T50 400 T50 600"
+        stroke="#1b5e20" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Large prominent leaves -->
+  <ellipse class="leaf1" cx="50" cy="80" rx="10" ry="16" fill="#66bb6a"/>
+  <ellipse class="leaf2" cx="70" cy="150" rx="11" ry="17" fill="#81c784"/>
+  <ellipse class="leaf1" cx="30" cy="220" rx="10" ry="16" fill="#4caf50"/>
+  <ellipse class="leaf2" cx="75" cy="280" rx="12" ry="18" fill="#9ccc65"/>
+  <ellipse class="leaf1" cx="25" cy="350" rx="11" ry="17" fill="#7cb342"/>
+  <ellipse class="leaf2" cx="65" cy="420" rx="10" ry="16" fill="#66bb6a"/>
+  <ellipse class="leaf1" cx="35" cy="520" rx="12" ry="18" fill="#558b2f"/>
+  <!-- Small accent leaves -->
+  <circle class="leaf2" cx="45" cy="130" r="6" fill="#8bc34a"/>
+  <circle class="leaf1" cx="55" cy="300" r="5" fill="#9ccc65"/>
+  <circle class="leaf2" cx="40" cy="470" r="6" fill="#7cb342"/>
+</svg>
+<div class="container">
+  <img src="fifi.png">
+
+  <h1>🎉 Happy Birthday Fifi 🎂</h1>
+
+  <div style="font-size:18px; opacity:0.9;">To the friend I cherish 💙</div>
+
+  <div id="typing"></div><span class="cursor"></span>
+
+  <div class="cake" onclick="blowCandles()">🎂</div>
+
+  <div class="player">
+    🎵 See You Again<br>
+    <button onclick="playMusic()">▶ Play</button>
+    <button onclick="pauseMusic()">⏸ Pause</button>
+  </div>
+</div>
+
+<audio id="bgMusic" loop>
+  <source src="Adventure Time - Island Song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const text = `Dear Fifi,
+
+Wishing you a day full of happiness, laughter, and beautiful memories.
+You're not just my friend—you’re the sister I never had.
+
+May this year bring you joy, success, and everything you dream of 💙`;
+
+let i = 0;
+function type() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 40);
+  }
+}
+type();
+
+/* Music */
+let music = document.getElementById("bgMusic");
+
+function playMusic() {
+  music.volume = 0;
+  music.play();
+
+  let vol = 0;
+  let fade = setInterval(() => {
+    if (vol < 1) {
+      vol += 0.05;
+      music.volume = vol;
+    } else clearInterval(fade);
+  }, 200);
+}
+
+function pauseMusic() {
+  music.pause();
+}
+
+/* Cake */
+function blowCandles() {
+  alert("🎉 Make a wish, Fifi! 🎉");
+}
+
+/* Flowers */
+for (let i = 0; i < 20; i++) {
+  let f = document.createElement("div");
+  f.className = "flower";
+  f.innerHTML = "🌸";
+  f.style.left = Math.random() * 100 + "vw";
+  f.style.animationDuration = (4 + Math.random() * 3) + "s";
+  document.body.appendChild(f);
+}
+</script>
+
+</body>
+</html>
